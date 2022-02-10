@@ -1,0 +1,23 @@
+<html>
+<head>
+<title></title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+	$( document ).ready(function() {
+    console.log( "ready!" );
+});
+	btleft=0;
+	bttop=0;
+	$(document).mousemove(function(event){
+		console.log("X: "+event.pageX+" Y: "+event.pageY);
+		 $( "#myimg" ).text( "X: "+event.pageX+" Y: "+event.pageY);
+	});
+</script>
+</head>
+<body>
+<div id="myimg" style="position:fixed;">
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<!--[if IE]>
+   
+   <style type="text/css">
+
+   .textcon { 
+       background:transparent;
+       filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99962e35,endColorstr=#99962e35); 
+       zoom: 1;
+    } 
+
+    </style>
+
+<![endif]-->
+<script>
+function normpages(){
+	var elem = document.getElementById('listpages');
+	if(elem.clientWidth<900){
+		var i;
+		for(i=1;i<9;i++){
+			var pg=document.getElementById('blockpage'+i);
+			pg.style.width="50.00%";
+	
+	
+		
+		}
+	}else
+	if(elem.clientWidth<1200){
+		var i;
+		for(i=1;i<9;i++){
+			var pg=document.getElementById('blockpage'+i);
+			pg.style.width=elem.clientWidth/3+"px";
+	
+	
+		
+		}
+	}else{
+		var i;
+		for(i=1;i<9;i++){
+			var pg=document.getElementById('blockpage'+i);
+			pg.style.width="25.00%";
+	
+	
+		
+		}
+	}
+}
+document.onreadystatechange = function () {
+  if (document.readyState == "complete") {
+	normpages();
+	
+	
+  }
+}
+</script>
+<title>JavaMaster</title>
+</head>
+<body onresize="normpages()" style="background-image: url(image/texture.jpg);padding:0px;margin:0px;">
+<div class="maincontent" style="max-width:1240px;min-width:720px;width:100%; margin:0 auto;">
+	<div id="maintitlemenu" style="width:100%;margin:0 0;height:84px;background-color:#962e35">
+		<div id="logo" style="position:absolute;width:520px;height:84px;background-color:#fcfcec;background-image: url(image/logo.jpg);"></div>
+		<div id="titlebar" style="height:84px;position:relative;margin-left:auto;">
+			<div id="socialhrefs" style="width:100%;height:44px;">
+				<a href=# class="socitem" style="background-image: url(image/facebklogo.jpg);"></a>
+				<a href=# class="socitem" style="background-image: url(image/vklogo.jpg);"></a>
+				<a href=# class="socitem" style="background-image: url(image/telega.jpg);"></a>
+			</div>
+			<div id="globalmenu" style="float:right;height:40px;background-color:#ed1c24;border-radius: 20px 0px 0px 0px;-moz-border-radius: 20px 0px 0px 0px;-webkit-border-radius: 20px 0px 0px 0px;border: 0px none #000000;">
+				<a href=# class="menuitem">home</a>
+				<a href=# class="menuitem">about</a>
+				<a href=# class="menuitem">order</a>
+				<a href=# class="menuitem">help</a>
+				<a href=# class="menuitem">careers</a>
+			</div>
+		</div>
+	</div>
+	<div id="mainslider" style="width:100%;margin:0 0;height:450px;background-color:#ed1c24;padding-top:10px;">
+		<div id="spaceslider" class="sps" style="overflow: hidden;margin:0px;padding:0px;position:relative;width:100%;height:440px;background-color:#c3c3c3;border-radius: 20px 20px 20px 20px;-moz-border-radius: 20px 20px 20px 20px;-webkit-border-radius: 20px 20px 20px 20px;border: 0px none #000000;">
+			<input type="radio" name="mslide" id="checkradio1" style="display:none;" checked>
+			<input type="radio" name="mslide" id="checkradio2" style="display:none;">
+			<input type="radio" name="mslide" id="checkradio3" style="display:none;">
+			<div id="slide1" class="slide" style="width:1240px;height:440px;background-color:#c3f3f3;margin-left:-620px;background-image: url(moduls/slider/image/slide1.jpg);">
+				
+			</div>
+			<div id="slide2" class="slide" style="width:1240px;height:440px;background-color:#fff3f3;margin-left:-620px;background-image: url(moduls/slider/image/slide2.jpg);">
+				
+			</div>
+			<div id="slide3"  class="slide" style="width:1240px;height:440px;background-color:#0000f3;margin-left:-620px;background-image: url(moduls/slider/image/slide3.jpg);">
+				
+			</div>
+			<div id="slide4"   class="slide" style="display:none;"></div>
+			<div id="slidehrefs" class="slidehrefsclass"style="position:absolute;left:5px;top:400px;height:20px;background-color: rgba(252,252,236,0.6);padding:4px;cursor:pointer;">
+				
+				<a href=# class="hrefs" id="href1" >more</a>
+				<a href=# class="hrefs" id="href2">more</a>
+				<a href=# class="hrefs" id="href3">more</a>
+			</div>
+			<div id="itemslide" class="itemslides" style="position:absolute;overflow:hidden;left:50%;margin-left:-60px;top:410px;height:30px;width:120px;background-color:#962e35;border-radius: 20px 20px 0px 0px;-moz-border-radius: 20px 20px 0px 0px;-webkit-border-radius: 20px 20px 0px 0px;border: 0px none #000000;">	
+				
+				<div id="labelgrp" class="labelgrps" style="position:absolute;width:90px;left:50%;margin-left:-45px;">
+					
+						
+					
+					<label id="checkslide1" class="checkslide" for="checkradio1">
+						<div id="nocheckimg1" class="nocheckimg"></div>
+						<div id="checkimg1" class="checkimg"></div>
+					</label>
+					<label id="checkslide2" class="checkslide" for="checkradio2">
+						<div id="nocheckimg2" class="nocheckimg" ></div>
+						<div id="checkimg2" class="checkimg" ></div>
+					</label>
+					<label id="checkslide3" class="checkslide" for="checkradio3">
+						<div id="nocheckimg3" class="nocheckimg" ></div>
+						<div id="checkimg3" class="checkimg" ></div>
+					</label>
+					<style>
+						
+						
+					</style>
+					
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<div id="submainmenu" style="width:100%;height:50px;background-color:#962e35;">
+		<div id="submenu" style="height:40px;float:right;background-color:#ed1c24;border-radius: 0px 0px 0px 20px;-moz-border-radius: 0px 0px 0px 20px;-webkit-border-radius: 0px 0px 0px 20px;border: 0px none #000000;">
+			<div class="menuitem">news</div>
+			<div class="menuitem">projects</div>
+			<div class="menuitem">publications</div>
+		</div>
+		
+	</div>
+	<div style="height:20px;width:100%;margin:0px;background-color:#fcfcec;position:relative;">
+		<div style="position:absolute;height:20px;width:40px;background-image: url(image/downp.jpg);left:50%;margin-left:-20px;"></div>
+	</div>
+	<div id="listpages" style="width:100%;background-color:#fcfcec;position:relative;float:left;">
+		<div id="blockpage1" class="myblocks">
+			<div class="imgcon" style="background-image: url(moduls/news/img/java.jpg);"></div>
+			<div class="textcon"><a href=# class="textconhref">Здесь будет надпись и ссылка.</a></div>
+		</div>
+		<div id="blockpage2" class="myblocks">
+			<div class="imgcon" style="background-image: url(moduls/news/img/monitors.jpg);"></div>
+			<div class="textcon"><a href=# class="textconhref">Здесь будет надпись и ссылка.</a></div>
+		</div>
+		<div id="blockpage3" class="myblocks">
+			<div class="imgcon" style="background-image: url(moduls/news/img/cl1234.jpg);"></div>
+			<div class="textcon"><a href=# class="textconhref">Здесь будет надпись и ссылка.</a></div>
+		</div>
+		<div id="blockpage4" class="myblocks">
+			<div class="imgcon" style="background-image: url(moduls/news/img/qv111.jpg);"></div>
+			<div class="textcon"><a href=# class="textconhref">Здесь будет надпись и ссылка.</a></div>
+		</div>
+		<div id="blockpage5" class="myblocks">
+			<div class="imgcon" style="background-image: url(moduls/news/img/vopros.jpg);"></div>
+			<div class="textcon"><a href=# class="textconhref">Здесь будет надпись и ссылка.</a></div>
+		</div>
+		<div id="blockpage6" class="myblocks">
+			<div class="imgcon" style="background-image: url(moduls/news/img/robot.jpg);"></div>
+			<div class="textcon"><a href=# class="textconhref">Здесь будет надпись и ссылка.</a></div>
+		</div>
+		<div id="blockpage7" class="myblocks">
+			<div class="imgcon" style="background-image: url(moduls/news/img/cplus.jpg);"></div>
+			<div class="textcon"><a href=# class="textconhref">Здесь будет надпись и ссылка.</a></div>
+		</div>
+		<div id="blockpage8" class="myblocks">
+			<div class="imgcon" style="background-image: url(moduls/news/img/blockchain.jpg);"></div>
+			<div class="textcon"><a href=# class="textconhref">Здесь будет надпись и ссылка.</a></div>
+		</div>
+		<div style="clear: left"></div>
+		<div style="padding:2px;width:100%;height:30px;position:relative;">
+			<a href=# id="moreinfo" style="text-decoration:none;position:absolute;left:50%;height:28px;padding:2px;padding-left:4px;padding-right:4px;background-color:#ed1c24;font-size:24px;color:#ffffff;border-radius:4px;margin-left:-25px;">more</a>
+		</div>
+		<div id="testdivs" style="width:100%;height:40px;">
+			<table style="width:100%;">
+				<tr><td style="width:100%;"><div id="floatspace" style="height:40px;width:100%;">free</div></td><td><div id="fixspace" style="height:40px;float:left;padding:2px;">fix</div></td></tr>
+			</table>
+		</div>
+	</div>
+	 
+	
+</div>
+
+</body>
+</html>

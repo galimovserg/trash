@@ -1,0 +1,56 @@
+<html>
+<head>
+<title></title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+	$( document ).ready(function() {
+    console.log( "ready!" );
+});
+	
+	obj=null;
+	dx=0
+	dy=0;
+	fl=0;
+	$(document).ready(function(){
+		$(".drag").mousedown(function(event){
+			fl=1;
+			obj=this;
+			dx=event.pageX-($( obj ).css( "left").replace('px',''));
+			dy=event.pageY-($( obj ).css( "top").replace('px',''));
+			console.log("down X: "+event.pageX+" Y: "+event.pageY);
+		});
+		$(".drag").mouseup(function(event){
+			fl=0;
+			obj=this;
+			console.log("down X: "+event.pageX+" Y: "+event.pageY);
+		
+		});
+		$(".drag").mouseup(function(event){
+			fl=0;
+			obj=this;
+			console.log("down X: "+event.pageX+" Y: "+event.pageY);
+		
+		});
+	
+	});
+	$(document).mousemove(function(event){
+		console.log("move X: "+event.pageX+" Y: "+event.pageY);
+		if(fl==1){
+		$(obj ).css( "top",event.pageY-dy);
+		 $( obj ).css( "left",event.pageX-dx);
+		}
+	});
+</script>
+</head>
+<body>
+<div id="myimg1" class="drag" style="position:fixed;width:20px;height:20px;background-color:red;">
+	
+</div>
+<div id="myimg2" class="drag" style="position:fixed;width:20px;height:20px;background-color:blue;">
+	
+</div>
+<div id="myimg3" class="drag" style="position:fixed;width:20px;height:20px;background-color:green;">
+	
+</div>
+</body>
+</html>

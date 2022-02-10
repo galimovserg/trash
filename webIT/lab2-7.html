@@ -1,0 +1,231 @@
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" href="style/style.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+	$( document ).ready(function() {
+    console.log( "ready!" );
+});
+	str="";
+	fl=1;
+	obj=null;
+	x0=0;
+	y0=0;
+	dx=0
+	dy=0;
+	fm=0;
+	ismove=0;
+	$(document).mousemove(function(event){
+		console.log("move X: "+event.pageX+" Y: "+event.pageY);
+		if(fm==1){
+			var xx=event.pageX;
+			var yy=event.pageY;
+			if(x0!=xx||y0!=yy){
+			console.log("is diff X0: "+x0+" Y0: "+y0);
+				console.log("is diff: "+xx+" Y: "+yy);
+				ismove=1;
+			}else{
+			ismove=0;
+			}
+			$(obj ).css( "top",event.pageY-dy);
+			$( obj ).css( "left",event.pageX-dx);
+		}else{
+			ismove=0;
+		}
+	});
+	function printstr(){
+		if(str.length<21){
+				$("#textfield").text(str);
+			}else{
+				if(str.length<41){
+					$("#textfield").html(str.substr(0,20)+"<br>"+str.substr(20,str.length));
+				}else{
+					$("#textfield").html(str.substr(str.length-40,20)+"<br>"+str.substr(str.length-20,str.length));
+				}
+			}
+	}
+	$(document).ready(function(){
+		$(".drag").mousedown(function(event){
+			fm=1;
+			obj=this;
+			x0=event.pageX;
+			y0=event.pageY;
+			dx=event.pageX-($( obj ).css( "left").replace('px',''));
+			dy=event.pageY-($( obj ).css( "top").replace('px',''));
+			console.log("down X: "+event.pageX+" Y: "+event.pageY);
+		});
+		$(".drag").mouseup(function(event){
+			fm=0;
+			obj=this;
+			console.log("down X: "+event.pageX+" Y: "+event.pageY);
+		
+		});
+		
+		$("#bt1").click(function(){
+			fl=0;
+			console.log("ismove: "+ismove);
+			if(ismove==0)
+			str+="1";
+			ismove=0;
+			printstr();
+		});
+		$("#bt2").click(function(){
+			fl=0;
+			if(ismove==0)
+			str+="2";
+			ismove=0;
+			printstr();
+		});
+		$("#bt3").click(function(){
+			fl=0;
+			if(ismove==0)
+			str+="3";
+			ismove=0;
+			printstr();
+		});
+		$("#bt4").click(function(){
+			fl=0;
+			if(ismove==0)
+			str+="4";
+			ismove=0;
+			printstr();
+		});
+		
+		$("#bt5").click(function(){
+			fl=0;
+			if(ismove==0)
+			str+="5";
+			ismove=0;
+			printstr();
+		});
+		$("#bt6").click(function(){
+			fl=0;
+			if(ismove==0)
+			str+="6";
+			ismove=0;
+			printstr();
+		});
+		$("#bt7").click(function(){
+			fl=0;
+			if(ismove==0)
+			str+="7";
+			ismove=0;
+			printstr();
+		});
+		$("#bt8").click(function(){
+			fl=0;
+			if(ismove==0)
+			str+="8";
+			ismove=0;
+			printstr();
+		});
+		$("#bt9").click(function(){
+			fl=0;
+			if(ismove==0)
+			str+="9";
+			ismove=0;
+			printstr();
+		});
+		$("#bt0").click(function(){
+			fl=0;
+			if(ismove==0)
+			str+="0";
+			ismove=0;
+			printstr();
+		});
+		$("#btplus").click(function(){
+			
+			if(fl==0&&str.length>0)
+			if(ismove==0)
+			str+="+";
+			ismove=0;
+			printstr();
+			fl=1;
+		});
+		$("#btpoint").click(function(){
+			
+			if(fl==0&&str.length>0)
+			if(ismove==0)
+			str+=".";
+			ismove=0;
+			printstr();
+			fl=1;
+		});
+		$("#btminus").click(function(){
+			
+			if(fl==0&&str.length>0)
+			if(ismove==0)
+			str+="-";
+			ismove=0;
+			printstr();
+			fl=1;
+		});
+		$("#btum").click(function(){
+			
+			if(fl==0&&str.length>0)
+			if(ismove==0)
+			str+="*";
+			ismove=0;
+			printstr();
+			fl=1;
+		});
+		$("#btdiv").click(function(){
+			
+			if(fl==0&&str.length>0)
+			if(ismove==0)
+			str+="/";
+			ismove=0;
+			printstr();
+			fl=1;
+		});
+		$("#btequal").click(function(){
+			
+			
+			if(ismove==0)
+			str=""+eval(str);
+			ismove=0;
+			printstr();
+			
+		});
+		$("#backspace").click(function(){
+			
+			
+			if(ismove==0)
+			str=str.substr(0,str.length-1);
+			ismove=0;
+			printstr();
+			
+		});
+	
+	});
+</script>
+</head>
+<body style="background-image: url(img/bg.jpg);">
+<div id="mycalculator" class="calculator drag" style="position:fixed;">
+	<div id="display"><div id="textfield"></div><div id="backspace"><div style="margin:auto;padding-top:12px;">&#8592 </div></div></div>
+	
+		<div id="board">
+			<div class="calcbutton" id="bt1"><div class="calcktext">1</div></div>
+			<div class="calcbutton" id="bt2"><div class="calcktext">2</div></div>
+			<div class="calcbutton" id="bt3"><div class="calcktext">3</div></div>
+			<div class="calcbutton" id="btplus"><div class="calcktext">+</div></div><div style="clear:left;"></div>
+			<div class="calcbutton" id="bt4"><div class="calcktext">4</div></div>
+			<div class="calcbutton" id="bt5"><div class="calcktext">5</div></div>
+			<div class="calcbutton" id="bt6"><div class="calcktext">6</div></div>
+			<div class="calcbutton" id="btminus"><div class="calcktext">-</div></div><div style="clear:left;"></div>
+			<div class="calcbutton" id="bt7"><div class="calcktext">7</div></div>
+			<div class="calcbutton" id="bt8"><div class="calcktext">8</div></div>
+			<div class="calcbutton" id="bt9"><div class="calcktext">9</div></div>
+			<div class="calcbutton" id="btum"><div class="calcktext">*</div></div><div style="clear:left;"></div>
+			<div class="calcbutton" id="btpoint"><div class="calcktext">.</div></div>
+			<div class="calcbutton" id="bt0"><div class="calcktext">0</div></div>
+			<div class="calcbutton" id="btequal"><div class="calcktext">=</div></div>
+			<div class="calcbutton" id="btdiv"><div class="calcktext">/</div></div>
+		</div>
+	
+</div>
+
+
+</body>
+</html>

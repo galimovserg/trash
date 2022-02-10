@@ -1,0 +1,56 @@
+# depslib dependency file v1.0
+1484483933 source:c:\users\sergey\desktop\практика по информатике\лаба9\a3\main.c
+	"main.h"
+
+1480961132 source:c:\users\sergey\desktop\практика по информатике\лаба9\a3\untit1.c
+
+1480963101 c:\users\sergey\desktop\практика по информатике\лаба9\a3\sergey.h
+	<time.h>
+	<GL/glut.h>
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<time.h>
+	<string.h>
+	<ctype.h>
+	<math.h>
+
+1481090243 c:\users\sergey\desktop\практика по информатике\лаба9\a3\main.h
+	<time.h>
+	<GL/glut.h>
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<time.h>
+	<string.h>
+	<ctype.h>
+	<math.h>
+
+1484483933 source:d:\рабочий стол\практика по информатике\лаба9\a3\main.c
+	"main.h"
+
+1481090243 d:\рабочий стол\практика по информатике\лаба9\a3\main.h
+	<time.h>
+	<GL/glut.h>
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<time.h>
+	<string.h>
+	<ctype.h>
+	<math.h>
+
+1484483933 source:d:\documents\документы\практика по информатике\лаба9\a3\main.c
+	"main.h"
+
+1481090243 d:\documents\документы\практика по информатике\лаба9\a3\main.h
+	<time.h>
+	<GL/glut.h>
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<time.h>
+	<string.h>
+	<ctype.h>
+	<math.h>
+

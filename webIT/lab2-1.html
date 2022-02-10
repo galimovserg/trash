@@ -1,0 +1,20 @@
+<html>
+<head>
+<title></title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+	$( document ).ready(function() {
+    console.log( "ready!" );
+});
+	$(document).ready(function(){
+		$("#mybtnid").click(function(){
+			console.log( "click!" );
+			$("body").css("background-color","red");
+		});
+	});
+</script>
+</head>
+<body>
+<input type="button" name="mybtnname" id="mybtnid" value="button">
+</body>
+</html>

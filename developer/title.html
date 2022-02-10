@@ -1,0 +1,90 @@
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<script>
+function reswin(){
+ var elem = document.getElementById('content');
+if(elem.clientWidth<1200){
+document.getElementById('lef').style.display="none";
+document.getElementById('rig').style.display="none";
+
+}else{
+document.getElementById('lef').style.width=(elem.clientWidth-720)/2;
+document.getElementById('rig').style.width=(elem.clientWidth-720)/2;
+
+document.getElementById('lef').style.display="block";
+document.getElementById('rig').style.display="block";
+}
+if(/Android|webOS|iPhone|BlackBerry|Opera Mini/i.test(navigator.userAgent)&elem.clientWidth<1200|elem.clientWidth<720){
+	document.getElementById('con_dev').style.display="block";
+	document.getElementById('con_pc').style.display="none";
+	document.getElementById('title_content_dev').style.display="block";
+	document.getElementById('title_content_pc').style.display="none";
+}else{
+	document.getElementById('con_dev').style.display="none";
+	document.getElementById('con_pc').style.display="block";
+	document.getElementById('title_content_dev').style.display="none";
+	document.getElementById('title_content_pc').style.display="block";
+}
+}
+
+document.addEventListener("DOMContentLoaded",reswin);
+</script>
+<title>JavaMaster</title>
+<head>
+<body onresize="reswin()" style="height:100%;padding:0px;margin:0px;">
+
+
+
+<div id="content"  style="width:100%;height:100%;background-color:#00ff00;position:fixed;left:0px;top:0px;padding-top:64px;">
+	<div id="menu" style="width:100%;height:100%;background-color:#0000ff;">
+		<div id="lef" style="display:none;float:left;height:100%;width:360px;background-color:#0000f0;">Левая колонка </div>
+		<div id="rig" style="display:none;float:right;height:100%;width:320px;background-color:#ff00ff;">Правая колонка</div>
+		<div id="cen" style="position:relative;height:100%;width:730px; max-width:720px;background-color:#00f0ff;margin-left:auto;margin-right:auto;">
+			<div id="wrapper" style="position: relative;width: 100%;height: 100%;overflow: hidden;">
+				<div id="con_dev" style="width: 100%;height: 100%;overflow:scroll;">
+					<div class="menu_dev_item">Главная</div>
+					<div class="menu_dev_item">Новости</div>
+					<div class="menu_dev_item">Проекты</div>
+					<div class="menu_dev_item">Заказать</div>
+					<div class="menu_dev_item">Карьера</div>
+					<div class="menu_dev_item">Справочник</div>
+					<div class="menu_dev_item">О нас</div>
+				</div>
+				<div id="con_pc" style="position: absolute; right: -30px;padding: 0 30px 0 0; width: 100%; height: 100%; overflow: scroll;">
+					<div id="contentpc" style="height:720px;max-width:720px;width:720px;background-color:#ffffff;margin-right:30px; padding:0px;">
+						Главное меню для ПК<br>
+						test<br>
+						test<br>
+						test<br>
+						test<br>
+						test<br>
+						test<br>
+						test<br>
+						test<br>
+						test<br>
+						test<br>
+						test<br>
+						test<br>
+						test<br>
+						test<br>
+						test<br>
+						test<br>
+					</div>
+			
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="title_bar" style="width:100%;height:64px;background-color:#ff0000;position:fixed;left:0px;top:0px;">
+<div id="title_content_dev" style="width:100%;height:100%;display:none;">
+бар для мобильной техники
+</div>
+<div id="title_content_pc" style="width:100%;height:100%;display:block;">
+бар для пк
+</div>
+</div>
+</body>
+</html>
